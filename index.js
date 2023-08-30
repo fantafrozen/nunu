@@ -4,7 +4,7 @@ var m3u8ToMp4 = require("m3u8-to-mp4");
 var converter = new m3u8ToMp4();
 const fs = require("fs")
 var counter = false;
-api.search("chinese").then((list) => {
+api.search("chinese girl").then((list) => {
     list.results.forEach(e => {
         if(e.premium) return;
         if(fs.existsSync(`./output/${e.title}.mp4`))return;
