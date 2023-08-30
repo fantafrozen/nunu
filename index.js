@@ -14,7 +14,7 @@ api.search("chinese girl").then((list) => {
         api.page(e.link, ['title','download_urls']).then(async r=>{
           //  exec(`wget -c -O "./output/${e.title}.m3u8" "${r.download_urls["1080P"]}"`,(a,b,c)=>
           await converter
-          .setInputFile(r.download_urls["1080P"])
+          .setInputFile(r.download_urls["720P"])
           .setOutputFile("./output/"+e.title+".mp4")
           .start();
         });
