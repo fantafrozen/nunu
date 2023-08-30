@@ -25,7 +25,8 @@ jobs:
 
     - name: Run
       run: |
-        sudo apt install ffmpeg -y
+        sudo apt update
+        sudo apt-get install ffmpeg -y
         npm i @justalk/pornhub-api
         node index.js
     - name: Commit files
